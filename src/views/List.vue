@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <SingleList msg="Welcome to Your Vue.js App"/>
+    <SingleList/>
   </div>
 </template>
 
