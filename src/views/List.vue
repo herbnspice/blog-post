@@ -7,7 +7,7 @@
 
 <script>
 // @ is an alias to /src
-import SingleList from '@/components/List.vue'
+import SingleList from '@/components/SinglePost.vue'
 
 export default {
   name: 'Home',

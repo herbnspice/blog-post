@@ -1,13 +1,13 @@
 {
     "posts": [
         {
-            "id":,
+            "id": 1,
             "title": "welcome to the new blog",
             "body": " this is the body text",
             "tags": [
                 "webdev",
                 "coding",
-                "news",
+                "news"
             ]
         },
         {
