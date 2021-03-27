@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <router-link tag="a" :to="{ name : 'Post', params: {id: post.id }}">
         <h1>{{ post.title }}</h1>
         <h2> {{ snippet }}</h2>
         <span v-for="tag in post.tags" :key="tag">
             #{{tag}}
         </span>
-    </div>
+    </router-link>
 </template>
 <script>
 import { computed } from 'vue';
