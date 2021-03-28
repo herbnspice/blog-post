@@ -8,7 +8,10 @@
         <label for="tags"> Tags ( hit enter to add a tag )</label>
         <input type="text" v-model="tag" @keydown.enter.prevent="handleKeydown">
         <div class="pin-container" > <span class="pin"  v-for="tag in tags" :key='tag' > #{{tag}} </span> </div>
-        <button>Add Post</button>
+        <button @click.prevent="handleSubmit">Add Post</button>
+
+        <div v-show="isLoading"> <Spinner/> </div>
+        <div v-if="error"> {{ error }}</div>
       </form>
   </div>
 </template>
@@ -43,6 +46,7 @@
         background: #48ff0cc7;
         border: none;
         border-radius: 5px;
+        cursor: pointer;
 
     }
     .pin-container{
@@ -62,13 +66,21 @@
 </style>
 <script>
 import {ref} from 'vue'
+import addPost from '@/composables/addPost'
+import Spinner from '@/components/Spinner.vue'
 export default {
+
+    components: {
+        Spinner
+    },
     setup(){
         const title = ref("")
         const body = ref("")
         const tags = ref([])
         const tag = ref('')
-
+        const isLoading = ref(false)
+        const isCreated = ref( ref)
+      
         const handleKeydown  = () => {
 
             if( !tags.value.includes(tag.value)){
@@ -76,7 +88,24 @@ export default {
             }
             tag.value = ''
         }
-        return { title, body, tags, tag, handleKeydown }
+
+        const handleSubmit = () => {
+
+              let post = {
+                    "title": title.value,
+                    "body":  body.value,
+                    "tags": tags.value
+                }
+                
+            const { isLoad, isSuccess, init   } =  addPost(post)
+            init()
+            
+            isLoading.value  = isLoad.value
+            isCreated.value  = isSuccess.value
+            console.log( isLoad.value )
+        }
+
+        return { title, body, tags, tag, isLoading , isCreated,  handleKeydown, handleSubmit }
 
     }
 }
