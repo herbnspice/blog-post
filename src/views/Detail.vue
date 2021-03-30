@@ -3,7 +3,7 @@
         <h1> {{ post.title }} </h1>
         <p>  {{ post.body }}  </p>
         <span v-for="tag in post.tags" :key="tag "> 
-            #{{ tag }}
+            <router-link :to="'/tag/'+tag"> #{{ tag }}</router-link>
         </span> 
     </div>
     <div v-else> <Spinner/> </div>

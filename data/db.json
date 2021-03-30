@@ -19,66 +19,6 @@
         "webdev",
         "coding"
       ]
-    },
-    {
-      "title": "",
-      "body": "",
-      "tags": [],
-      "id": 3
-    },
-    {
-      "title": "test",
-      "body": "tedasda",
-      "tags": [],
-      "id": 4
-    },
-    {
-      "title": "dasds",
-      "body": "adsad",
-      "tags": [],
-      "id": 5
-    },
-    {
-      "title": "test",
-      "body": "test",
-      "tags": [],
-      "id": 6
-    },
-    {
-      "title": "test",
-      "body": "sadsad",
-      "tags": [],
-      "id": 7
-    },
-    {
-      "title": "dsad",
-      "body": "sadsa",
-      "tags": [],
-      "id": 8
-    },
-    {
-      "title": "sadsa",
-      "body": "dad",
-      "tags": [
-        "asdsa"
-      ],
-      "id": 9
-    },
-    {
-      "title": "dasd",
-      "body": "asdsa",
-      "tags": [
-        "dasdsa"
-      ],
-      "id": 10
-    },
-    {
-      "title": "dasd",
-      "body": "dasd",
-      "tags": [
-        "dasd"
-      ],
-      "id": 11
     }
   ]
 }

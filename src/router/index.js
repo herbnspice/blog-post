@@ -23,6 +23,12 @@ const routes = [
     name: 'Create',
     component: () => import(/* webpackChunkName: "about" */ '../views/Create.vue'),
     props: true
+  },
+  {
+    path: '/tag/:tag',
+    name: 'Tag',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Tag.vue'),
+    props: true
   }
 ]
 
